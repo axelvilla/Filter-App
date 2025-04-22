@@ -3,14 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Filter App</title>
+    <title>Tabla de Datos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
 
+        <h1>Tabla de datos</h1>
+      
+        <div class="filters">
+          <label for="filter-select">Filtrar por</label>
 
+          <select id="filterProvincia" >
+            <option value="">Todos</option>
+            <option value="nombre-asc">A-Z</option>
+            <option value="nombre-desc">Z-A</option>
+            <option value="habitantes-des">Mayor a menor (habitantes)</option>
+            <option value="habitantes-asc">Menor a mayor (habitantes)</option>
+        
+        </select>
+          <input type="text" id="buscador" placeholder="🔍 Buscar...">
+        </div>
+      
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Provincia<button>1</button></th> 
+              <th>Cant. Habitantes</th>
+              <th>Capítal</th>
+              <th>Cant. Habitantes</th>
+              <th>Region</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <!-- ---------------------------- -->
 
-    <script src="scripts.js"></script>
+          </tbody>
+        </table>
+      
+        <!-- <div class="pagination">
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <span>...</span>
+          <button>10</button>
+        </div> -->
+      
+  
+
+<script src="scrtip.js"></script>
+<script src="lupita.js"></script>
+<script src="filtro.js"></script>
 </body>
+
 </html>
