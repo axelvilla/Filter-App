@@ -6,41 +6,88 @@
     <title>Tabla de Datos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
 
-    <h1>TABLA DE DATOS</h1>
+    <div class="container">
+
+        <div class="caja">
+
+            <h1>TABLA DE DATOS</h1>
 
 
-    <h2>ID PROVINCIAS</h2>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
+            <label>Filtrar por</label>
+            <select>
+
+                <option></option>
+                <option>Buenos Aires</option>
+                <option>Centro</option>
+                <option>Cuyo</option>
+                <option>Noreste</option>
+                <option>Noroeste</option>
+                <option>Patagonia</option>
+
+            </select>
 
 
-    <h2>PROVINCIAS</h2>
-    <p>Santa fe</p>
-    <p>Córdoba</p>
-    <p>Salta</p>
+            <label for="buscador"></label>
+            <input type="text" id="buscar" name="buscar" placeholder="🔍"> 
 
-    <h2>CANTIDAD DE HABITANTES</h2>
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    
-    <h2>HABITANTES CAPITAL PROV </h2>
-    <P>santa fe cap</P>
-    <p>cordoba cap</p>
-    <p>salta cap</p>
+            <br> <br>
 
+            <table>
 
-    <h2>REGIÓN</h2>
-    <p>pampeana</p>
-    <p>Centro</p>
-    <p>Noroeste</p>
+                <thead>
 
+                    <tr>
 
-    <label for="buscador">Buscar:</label>
-    <input type="text" id="buscar" name="buscar" placeholder="">
+                        <th>ID<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+                        <th>Provincia<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+                        <th>N° Habitantes<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+                        <th>Capital<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+                        <th>N° Habitantes Capital<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+                        <th>Región<button><svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#1f1f1f"><path d="M480-120 300-300l58-58 122 122 122-122 58 58-180 180ZM358-598l-58-58 180-180 180 180-58 58-122-122-122 122Z"/></svg></button></th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+                        <td>Santa Fe</td>
+                        <td>3397532</td>
+                        <td>Santa Fe</td>
+                        <td>430000</td>
+                        <td>5</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+                        <td>Mendoza</td>
+                        <td>2014533</td>
+                        <td>Mendoza</td>
+                        <td>1200000</td>
+                        <td>4</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <br> <br>
+
+            <button>Representación gráfica de regiones</button>            
+
+        </div>
+
+    </div>
 
 </body>
 </html>
