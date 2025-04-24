@@ -49,9 +49,14 @@ def index():
         cursor.execute(sql, valores)
         datos = cursor.fetchall()
         conexion.commit()
+    except Exception as e:
+        print(f"Error: {e}")
     finally:
-        cursor.close()
-        conexion.close()
+        # Solo cerramos cursor y conexion si han sido definidos
+        if cursor:
+            cursor.close()
+        if conexion:
+            conexion.close()
 
     return render_template('index.html', datos=datos, buscar=buscar, region=region)
 

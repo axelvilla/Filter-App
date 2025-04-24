@@ -1,3 +1,22 @@
+    // function mostrarImagen(){
+
+//     const img =document.getElementById('imagen');
+//     if(img.style.display === 'none' || img.style.display === ''){
+//     img.style.display = 'block';
+//     setTimeout(()=>{
+//         img.style.opacity = 1;
+    
+//     },0.5);
+// }else{
+//     img.style.opacity = 0;
+//     setTimeout(()=>{
+//          img.style.display = 'none'
+//     },2000);
+//    }}
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.button_sort').forEach((button, index) => {
         let ascending = true;
@@ -32,4 +51,5 @@ document.addEventListener('DOMContentLoaded', function () {
             ascending = !ascending;
         });
     });
+    
 });

@@ -145,5 +145,12 @@ body {
 
         cursor: pointer;
     }
+        /* #imagen{
+        opacity: 0;
+        transition: opacity 2s ease-in-out; 
+        display: none;
+        max-width: 90%;
+        margin-top: 20px;
+    } */
 
 }
