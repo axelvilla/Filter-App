@@ -78,7 +78,8 @@
 
             <br> <br>
 
-            <button>Representación gráfica de regiones</button>            
+            <button onclick="mostrarOcultar()">Representación gráfica de regiones</button>   
+            <img src="../static/Grafico.jpg" alt="" id="imagen" style="display: none; width: 1000px;">         
 
         </div>
 
@@ -87,5 +88,6 @@
 
     <script src="{{ url_for('static', filename='/scripts.js') }}"></script>
     <script src="{{ url_for('static', filename='/icons.js') }}"></script>
+
 </body>
 </html>

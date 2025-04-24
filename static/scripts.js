@@ -33,3 +33,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+function mostrarOcultar() {
+    const imagen = document.getElementById("imagen");
+
+    if(imagen.style.display === "none"){
+        imagen.style.display = "block";
+    }else{
+        imagen.style.display = "none";
+    }
+}
