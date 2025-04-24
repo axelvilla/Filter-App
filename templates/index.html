@@ -43,17 +43,17 @@
 
                     <tr>
 
-                        <th>ID<button class="button_sort"></button></th>
+                        <th>ID<button class="button_sort" data-column="0"></button></th>
 
-                        <th>Provincia<button class="button_sort"></button></th>
+                        <th>Provincia<button class="button_sort" data-column="1"></button></th>
 
-                        <th>N° Habitantes<button class="button_sort"></button></th>
+                        <th>N° Habitantes<button class="button_sort" data-column="2"></button></th>
 
-                        <th>Capital<button class="button_sort"></button></th>
+                        <th>Capital<button class="button_sort" data-column="3"></button></th>
 
-                        <th>N° Habitantes Capital<button class="button_sort"></button></th>
+                        <th>N° Habitantes Capital<button class="button_sort" data-column="4"></button></th>
 
-                        <th>Región<button class="button_sort"></button></th>
+                        <th>Región<button class="button_sort" data-column="5"></button></th>
 
                     </tr>
 
@@ -85,7 +85,7 @@
     </div>
 
 
-
-    <script src="icons.js"></script>
+    <script src="{{ url_for('static', filename='/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='/icons.js') }}"></script>
 </body>
 </html>
