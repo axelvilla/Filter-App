@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Datos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="caja">
+
+            <h1>TABLA DE DATOS</h1>
+
+
+            <form method="get">
+                <label for="region">Filtrar por región</label>
+                <select name="region" id="region" onchange="this.form.submit()">
+                <option value="">Todas</option>
+                <option value="Buenos Aires" {% if region == 'Buenos Aires' %}selected{% endif %}>Buenos Aires</option>
+                <option value="Centro" {% if region == 'Centro' %}selected{% endif %}>Centro</option>
+                <option value="Cuyo" {% if region == 'Cuyo' %}selected{% endif %}>Cuyo</option>
+                <option value="Noreste" {% if region == 'Noreste' %}selected{% endif %}>Noreste</option>
+                <option value="Noroeste" {% if region == 'Noroeste' %}selected{% endif %}>Noroeste</option>
+                <option value="Patagonia" {% if region == 'Patagonia' %}selected{% endif %}>Patagonia</option>
+
+            </select>
+
+
+            <label for="buscador"></label>
+            <input type="text" id="buscar" name="buscar" placeholder="🔍"> 
+            </form>
+            <br> <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID<button class="button_sort"></button></th>
+
+                        <th>Provincia<button class="button_sort"></button></th>
+
+                        <th>N° Habitantes<button class="button_sort"></button></th>
+
+                        <th>Capital<button class="button_sort"></button></th>
+
+                        <th>N° Habitantes Capital<button class="button_sort"></button></th>
+
+                        <th>Región<button class="button_sort"></button></th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    {% for fila in datos %}
+                    <tr>
+                        <td>{{ fila[0] }}</td>
+                        <td>{{ fila[1] }}</td>
+                        <td>{{ fila[2] }}</td>
+                        <td>{{ fila[3] or 'Sin capital' }}</td>
+                        <td>{{ fila[4] or '-' }}</td>
+                        <td>{{ fila[5] }}</td>
+                    </tr>
+                    {% endfor %}
+
+
+                </tbody>
+
+            </table>
+
+            <br> <br>
+
+            <button>Representación gráfica de regiones</button>            
+
+        </div>
+
+    </div>
+
+
+
+    <script src="icons.js"></script>
+</body>
+</html>
