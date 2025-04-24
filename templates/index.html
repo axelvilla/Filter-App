@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla de Datos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
@@ -18,23 +18,23 @@
             <h1>TABLA DE DATOS</h1>
 
 
-            <label>Filtrar por</label>
-            <select>
-
-                <option></option>
-                <option>Buenos Aires</option>
-                <option>Centro</option>
-                <option>Cuyo</option>
-                <option>Noreste</option>
-                <option>Noroeste</option>
-                <option>Patagonia</option>
+            <form method="get">
+                <label for="region">Filtrar por región</label>
+                <select name="region" id="region" onchange="this.form.submit()">
+                <option value="">Todas</option>
+                <option value="Buenos Aires" {% if region == 'Buenos Aires' %}selected{% endif %}>Buenos Aires</option>
+                <option value="Centro" {% if region == 'Centro' %}selected{% endif %}>Centro</option>
+                <option value="Cuyo" {% if region == 'Cuyo' %}selected{% endif %}>Cuyo</option>
+                <option value="Noreste" {% if region == 'Noreste' %}selected{% endif %}>Noreste</option>
+                <option value="Noroeste" {% if region == 'Noroeste' %}selected{% endif %}>Noroeste</option>
+                <option value="Patagonia" {% if region == 'Patagonia' %}selected{% endif %}>Patagonia</option>
 
             </select>
 
 
             <label for="buscador"></label>
             <input type="text" id="buscar" name="buscar" placeholder="🔍"> 
-
+            </form>
             <br> <br>
 
             <table>
@@ -60,28 +60,17 @@
                 </thead>
 
                 <tbody>
-
+                    {% for fila in datos %}
                     <tr>
-
-                        <td>1</td>
-                        <td>Santa Fe</td>
-                        <td>3397532</td>
-                        <td>Santa Fe</td>
-                        <td>430000</td>
-                        <td>5</td>
-
+                        <td>{{ fila[0] }}</td>
+                        <td>{{ fila[1] }}</td>
+                        <td>{{ fila[2] }}</td>
+                        <td>{{ fila[3] or 'Sin capital' }}</td>
+                        <td>{{ fila[4] or '-' }}</td>
+                        <td>{{ fila[5] }}</td>
                     </tr>
+                    {% endfor %}
 
-                    <tr>
-
-                        <td>2</td>
-                        <td>Mendoza</td>
-                        <td>2014533</td>
-                        <td>Mendoza</td>
-                        <td>1200000</td>
-                        <td>4</td>
-
-                    </tr>
 
                 </tbody>
 
